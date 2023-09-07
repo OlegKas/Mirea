@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class ArraySumAndAverage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Запрашиваем у пользователя количество элементов в массиве
+        System.out.print("Введите количество элементов в массиве: ");
+        int n = scanner.nextInt();
+        // Инициализируем массив
+        int[] arr = new int[n];
+        // Заполняем массив значениями, вводимыми пользователем
+        for (int i = 0; i < n; i++) {
+            System.out.print("Введите элемент " + (i + 1) + ": ");
+            arr[i] = scanner.nextInt();
+        }
+        // Вычисляем сумму элементов
+        int sumOfElements = 0;
+        for (int num : arr) {
+            sumOfElements += num;
+        }
+        // Вычисляем среднее арифметическое
+        double average = (double) sumOfElements / n;
+        // Выводим результат на экран
+        System.out.println("Сумма элементов массива: " + sumOfElements);
+        System.out.println("Среднее арифметическое элементов массива: " + average);
+        scanner.close();
+    }
+}
