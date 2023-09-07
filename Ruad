@@ -1,8 +1,8 @@
 public class Ruad {
     public static void main(String[] args) {
-        int n = 10; // Количество чисел в гармоническом ряде
+        int n = 10; // Количество чисел в гарм. ряде
         double sum = 0.0;
-        System.out.println("Первые " + n + " чисел гармонического ряда:");
+        System.out.println("Первые " + n + " чисел гарм. ряда:");
         for (int i = 1; i <= n; i++) {
             sum += 1.0 / i;
             System.out.printf("Элемент %2d: %.4f%n", i, sum);
