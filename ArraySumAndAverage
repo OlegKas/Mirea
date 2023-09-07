@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ArraySumAndAverage {
+public class Array {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // Запрашиваем у пользователя количество элементов в массиве
@@ -11,17 +11,15 @@ public class ArraySumAndAverage {
         for (int i = 0; i < n; i++) {
             System.out.print("Введите элемент " + (i + 1) + ": ");
             arr[i] = scanner.nextInt();
-        }
-        // Вычисляем сумму элементов
-        int sumOfElements = 0;
+        }// Вычисляем сумму элементов
+        int sum = 0;
         for (int num : arr) {
-            sumOfElements += num;
-        }
-        // Вычисляем среднее арифметическое
-        double average = (double) sumOfElements / n;
+            sum += num;
+        }// Вычисляем среднее арифметическое
+        double average = (double) sum / n;
         // Выводим результат на экран
-        System.out.println("Сумма элементов массива: " + sumOfElements);
-        System.out.println("Среднее арифметическое элементов массива: " + average);
+        System.out.println("Сумма элементов массива: " + sum);
+        System.out.println("Среднее арифм. элементов массива: " + average);
         scanner.close();
     }
 }
