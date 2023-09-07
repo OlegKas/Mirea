@@ -2,24 +2,24 @@ import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // Запрашиваем у пользователя количество элементов в массиве
-        System.out.print("Введите количество элементов в массиве: ");
+        // Запрашиваем у пользователя кол-во элементов в массиве
+        System.out.print("Введите кол-во элементов в массиве: ");
         int n = scanner.nextInt();
         // Инициализируем массив
-        int[] arr = new int[n];
-        // Заполняем массив значениями, вводимыми пользователем
+        int[] massive = new int[n];
+        // Заполняем массив знач. пользователя
         for (int i = 0; i < n; i++) {
             System.out.print("Введите элемент " + (i + 1) + ": ");
-            arr[i] = scanner.nextInt();
-        }// Вычисляем сумму элементов
+            massive[i] = scanner.nextInt();
+        }// Вычисляем сумму
         int sum = 0;
-        for (int num : arr) {
+        for (int num: massive) {
             sum += num;
         }// Вычисляем среднее арифметическое
         double average = (double) sum / n;
-        // Выводим результат на экран
-        System.out.println("Сумма элементов массива: " + sum);
-        System.out.println("Среднее арифм. элементов массива: " + average);
+        // Выводим
+        System.out.println("Сумма: " + sum);
+        System.out.println("Среднее арифм.: " + average);
         scanner.close();
     }
 }
