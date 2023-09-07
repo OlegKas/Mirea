@@ -2,37 +2,40 @@ import java.util.Scanner;
 public class Work {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите количество элементов в массиве: "); // Запрашиваем у пользователя количество элементов в массиве
+        System.out.print("Введите кол-во элементов в массиве: "); // Запраш. у пользователя кол-во элементов в массиве
         int n = scanner.nextInt();
-        int[] arr = new int[n];// Инициализируем массив
-        for (int i = 0; i < n; i++) { // Заполняем массив значениями, вводимыми пользователем
+        int[] massive = new int[n];  // Инициализируем массив
+        for (int i = 0; i < n; i++)  // Заполняем массив значениями пользователя
+        {
             System.out.print("Введите элемент " + (i + 1) + ": ");
-            arr[i] = scanner.nextInt();
-        }// Вычисляем сумму элементов с использованием цикла do-while
+            massive[i] = scanner.nextInt();
+        }
         int sumDW = 0;
         int indexDW = 0;
+        // сумма через do-while
         do {
-            sumDW += arr[indexDW];
+            sumDW += massive[indexDW];
             indexDW++;
-        } while (indexDW < n);// Вычисляем сумму элементов с использованием цикла while
+        }
+        while (indexDW < n); // сумма через while
         int sumW = 0;
         int indexW = 0;
         while (indexW < n) {
-            sumW += arr[indexW];
+            sumW += massive[indexW];
             indexW++;
-        }// Находим максимальный и минимальный элементы массива
-        int max = arr[0];
-        int min = arr[0];
+        } // Находим max и min массива
+        int max = massive[0];
+        int min = massive[0];
         for (int i = 1; i < n; i++) {
-            if (arr[i] > max) {
-                max = arr[i]; }
-            if (arr[i] < min) {
-                min = arr[i]; }
-        }// Выводим результат на экран
-        System.out.println("Сумма элементов массива (с do-while): " + sumDW);
-        System.out.println("Сумма элементов массива (с while): " + sumW);
-        System.out.println("Максимальный элемент массива: " + max);
-        System.out.println("Минимальный элемент массива: " + min);
-        scanner.close();
+            if (massive[i] > max) {
+                max = massive[i]; }
+            if (massive[i] < min) {
+                min = massive[i]; }
+        }
+        System.out.println("Сумма (с do-while): " + sumDW);
+        System.out.println("Сумма (с while): " + sumW);
+        System.out.println("Максимальный элемент: " + max);
+        System.out.println("Минимальный элемент: " + min);
+        scanner.close(); //вывод
     }
 }
